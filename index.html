@@ -32,6 +32,18 @@
   <footer>
 
   </footer>
+  <script>
+    let loadImgs = [];
+    
+    function preload(){
+      for(let i = 0; i < preload.arguments.length; i++){
+        loadImgs[i] = new Image();
+        loadImgs[i].src = preload.arguments.src;
+      }
+    }
+
+    preload('./etc/imgs/loading.gif')
+  </script>
   <script src="./js/loadingPage.js"></script>
   <script src="./js/imgSection.js"></script>
   <script src="./js/questionSection.js"></script>
