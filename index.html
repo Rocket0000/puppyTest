@@ -7,6 +7,19 @@
   <title>Puppy Test!?</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/common.css">
+  <script>
+
+    let loadImg = [];
+    
+    function preload(){
+      for(let i = 0; i < preload.arguments.length; i++){
+        loadImg[i] = new Image();
+        loadImg[i].src = preload.arguments.src;
+      }
+    }
+
+    preload('./etc/imgs/loading.gif')
+  </script>
   <script defer src="./js/loadiong.js"></script>
 
 </head>
@@ -32,19 +45,7 @@
   <footer>
 
   </footer>
-  <script>
 
-    let loadImg = [];
-    
-    function preload(){
-      for(let i = 0; i < preload.arguments.length; i++){
-        loadImg[i] = new Image();
-        loadImg[i].src = preload.arguments.src;
-      }
-    }
-
-    preload('./etc/imgs/loading.gif')
-  </script>
   <script src="./js/loadingPage.js"></script>
   <script src="./js/imgSection.js"></script>
   <script src="./js/questionSection.js"></script>
