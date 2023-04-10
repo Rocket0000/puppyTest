@@ -1,5 +1,8 @@
 class LoadingPage extends HTMLElement{
   connectedCallback(){
+    let loadImg = [];
+
+
     this.id = 'loadingPage'
 
     this.innerHTML= `
@@ -8,6 +11,15 @@ class LoadingPage extends HTMLElement{
       <p>로딩중...</p>
     </div>
     `
+
+    function preload(){
+      for(let i = 0; i < preload.arguments.length; i++){
+        loadImg[i] = new Image();
+        loadImg[i].src = preload.arguments.src;
+      }
+    }
+
+    preload('../etc/imgs/loading.gif')
   }
 }
 
